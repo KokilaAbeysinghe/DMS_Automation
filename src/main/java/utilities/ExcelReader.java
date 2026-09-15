@@ -1,6 +1,7 @@
 package utilities;
 
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -16,8 +17,7 @@ public class ExcelReader {
         String path = "test_data/credentials.xlsx";
 
         try (FileInputStream fis = new FileInputStream(path);
-             Workbook workbook = WorkbookFactory.create(fis)) {
-
+             Workbook workbook = new XSSFWorkbook(fis)) {
             Sheet sheet = workbook.getSheet("Sheet1");
             if (sheet == null) {
                 throw new RuntimeException("Sheet named 'Sheet1' not found in " + path);

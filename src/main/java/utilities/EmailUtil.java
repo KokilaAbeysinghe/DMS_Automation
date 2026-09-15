@@ -14,7 +14,7 @@ public class EmailUtil {
     // ---- Fill these in with your own details ----
     private static final String FROM_EMAIL = "dkokilaa96@gmail.com";
     private static final String APP_PASSWORD = "apnrrsebmrhbqibu"; // no spaces
-    private static final String TO_EMAIL = "testkokila@outlook.com";
+    private static final String TO_EMAIL = "testkokila@outlook.com,kanthaura@gmail.com,gayeshat@auradot.com,ruvinthak@auradot.com,dharanid@auradot.com";
 
     public static void sendEmail(String subject, String body, String attachmentPath) {
         Properties props = new Properties();
