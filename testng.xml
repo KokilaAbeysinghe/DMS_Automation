@@ -6,4 +6,9 @@
             <class name="tests.LoginTest"/>
         </classes>
     </test>
+    <test name="Upload-Tests">
+        <classes>
+            <class name="tests.UploadTest"/>
+        </classes>
+    </test>
 </suite>

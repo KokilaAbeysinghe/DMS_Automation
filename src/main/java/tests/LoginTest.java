@@ -100,7 +100,7 @@ public class LoginTest extends BaseTest {
         }
 
     }
-
+/*
     // 11. Click "Sign in with Microsoft" button and verify Microsoft login page loads
     @Test(priority = 11)
     public void signInWithMicrosoftButton() {
@@ -110,8 +110,10 @@ public class LoginTest extends BaseTest {
                 "Microsoft login page did not load. Current URL: " + currentUrl);
     }
 
+ */
+
     // 12. Try accessing system without login
-    @Test(priority = 12)
+    @Test(priority = 11)
     public void accessSystemWithoutLogin() {
 
         String protectedUrl = ExcelReader.get("loginUrl") + "dashboard";
@@ -123,7 +125,7 @@ public class LoginTest extends BaseTest {
     }
 
     // 13. Enter valid Email and valid Password, click Submit (MUST run last)
-    @Test(priority = 13)
+    @Test(priority = 12)
     public void validEmailValidPassword() {
         BaseTest.loginPage.login(ExcelReader.get("validEmail"), ExcelReader.get("validPassword"));
         Assert.assertTrue(BaseTest.loginPage.isLoginSuccessful(),

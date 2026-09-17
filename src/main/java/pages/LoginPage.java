@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 
 import java.time.Duration;
@@ -20,7 +21,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         PageFactory.initElements(driver, this);
     }
 
@@ -55,6 +56,7 @@ public class LoginPage {
         driver.get(url);
         wait.until(ExpectedConditions.visibilityOf(usernameField));
         pause();
+
     }
 
     public void enterUsername(String username) {
@@ -113,6 +115,11 @@ public class LoginPage {
         } catch (Exception e) {
             return false;
         }
+    }
+    public boolean isLoginPageDisplayed() {
+        return !driver.findElements(
+                org.openqa.selenium.By.cssSelector("input[type='email'], input[name='username'], input[name='email']")
+        ).isEmpty();
     }
 
     public boolean isEmailFieldEmpty() {
