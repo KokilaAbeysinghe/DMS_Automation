@@ -11,4 +11,10 @@
             <class name="tests.UploadTest"/>
         </classes>
     </test>
+    <test name ="Index-Tests ">
+        <classes>
+            <class name="tests.IndexDocumentTest"/>
+        </classes>
+    </test>
 </suite>
+

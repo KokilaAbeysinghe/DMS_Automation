@@ -45,7 +45,7 @@ public class UploadPage {
     }
 
     public void selectFile(String absoluteFilePath) {
-        // --- DIAGNOSTIC: how many elements actually have id="documents"? ---
+
         List<WebElement> matches = driver.findElements(By.id("documents"));
         System.out.println("[DIAGNOSTIC] Elements matching id='documents': " + matches.size());
 
@@ -61,7 +61,7 @@ public class UploadPage {
     }
 
     public void clickUpload() {
-        // --- DIAGNOSTIC: how many elements match the 'start' class locator? ---
+
         List<WebElement> startMatches = driver.findElements(By.xpath("//button[contains(@class,'start')]"));
         System.out.println("[DIAGNOSTIC] Elements matching class*='start': " + startMatches.size());
         for (int i = 0; i < startMatches.size(); i++) {
