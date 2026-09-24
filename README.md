@@ -1,4 +1,4 @@
-# auraDOCS V4 - Login Page Automation (Selenium + TestNG + Java)
+Document Management System Automation (Selenium + TestNG + Java)
 
 This is a simple, beginner-friendly Selenium project that automates 12 login
 page scenarios for https://v4.auradocs.com/
